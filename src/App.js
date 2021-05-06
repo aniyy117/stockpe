@@ -3,16 +3,25 @@ import './App.css';
 import logo from './image/logo.png'
 import side from './image/side.png'
 import React, {useState} from 'react';
+import firebase from './ult/firebase';
 
 function App() {
+  const [title , setTitle ] = useState('');
+  const [show , setShow ] = useState(false);
 
-  const saveAnswer = (event) =>{
-    event.preventDefault();
+  const handleOnChange = (e) =>{
+    setTitle(e.target.value);
+  };
 
-    const elementsArray = [...event.target.elements];
+  const createTodo = () =>{
+    const todoRef = firebase.database().ref("Todo");
+    const todo = {
+      title, 
+      Compelete : false,
+    };
 
-    console.log(elementsArray);
-  }
+    todoRef.push(todo);
+  };
 
   return (
     <div className="App">
@@ -24,12 +33,15 @@ function App() {
       </header>
       <div className="content">
       <div className="textbox">
-          <h3>Post Dribble Shot in <br/> 1 Minute</h3>
-          <p>Upload directly from sketch to Dribble with a<br/>beautifully carfted mockedup in seconds</p>
-          <div className="input-group  textArea" >
-            <input type="text" className="form-control textArea " placeholder="Enter your email"/>
-            <span className="input-group-text btn btn-primary textArea " id="basic-addon2" onClick={saveAnswer} >Request Invite</span>
+      <h3>We let you buy Stocks in <br/> tokenized form</h3>
+      <p>Just like cryptocurrency, Now buy real stocks with any amount <br/>Get yourself a part of stock without buying it a whole.</p>
+          <div className="input-group  textArea">
+            <input type="email" className="form-control textArea " placeholder="Enter your email"  onChange={handleOnChange}/>
+            <span className="input-group-text btn btn-primary textArea " id="basic-addon2" onClick={() =>{createTodo(); setShow(true); }}>Request Invite</span>
           </div>
+          {
+              show?<h6 className="msg">Thank you. We will email you once our BETA App is out.</h6>:null
+            }
         </div>
         <div className="imgbox">
              <img src ={side} className="side img-fluid" alt="img"/>

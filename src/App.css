@@ -54,9 +54,9 @@ header{
   max-width: 600px;
 }
 
-.content .textbox h2{
+.content .textbox h3{
   color: #333;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -82,6 +82,13 @@ header{
   color: 	#111111;
 }
 
+.msg{
+  color: rgb(71, 231, 132);
+  font-size: 1rem;
+ text-align: center;
+  padding: 20px
+}
+
 .bottomtext p{
   color: rgb(112, 112, 112);
   font-size: 80%;
@@ -102,11 +109,11 @@ header{
     flex-direction: column;
     margin-top: 5rem;
     margin-right: 3rem;
-    padding-right: 40px;
+    padding-right: 45px;
   }
 
-  .content .textbox h2{
-    font-size: 2rem;
+  .content .textbox h3{
+    font-size: 1.4rem;
   }
 
   .content .textbox{
@@ -114,9 +121,12 @@ header{
   }
   .content .side{
     max-width: 300px;
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
   .textArea{
     font-size: .7rem;
+  }
+  .msg{
+    font-size: 1rem;
   }
  }
