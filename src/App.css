@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #a5a4a1);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #EAEAEA, #DBDBDB, #F2F2F2, #a5a4a1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section{
+  position: relative;
+  width: 100%;
+  min-height: 95vh;
+  padding-left: 60px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+header{
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+   position: relative;
+   max-width: 150px;
 }
+
+
+.content{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textbox{
+  position: relative;
+  max-width: 600px;
+}
+
+.content .textbox h2{
+  color: #333;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.content .textbox p{
+  color: 	#707070;
+  padding-bottom: 30px;
+}
+
+.content .side{
+  margin-right: 30px;
+  max-width: 400px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter:         drop-shadow(5px 5px 5px #222); 
+}
+
+.textArea{
+  border-radius: 2rem;
+}
+
+.bottomtext{
+  text-align: center;
+  margin-bottom:10px;
+  color: 	#111111;
+}
+
+.bottomtext p{
+  color: rgb(112, 112, 112);
+  font-size: 80%;
+  margin-bottom: 30px;
+}
+
+ @media (max-width: 991px) {
+   
+  header{
+    padding: 20px;
+  }
+
+  .logo{
+    max-width: 120px;
+  }
+
+  .content{
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-right: 3rem;
+    padding-right: 40px;
+  }
+
+  .content .textbox h2{
+    font-size: 2rem;
+  }
+
+  .content .textbox{
+    max-width: 100%;
+  }
+  .content .side{
+    max-width: 300px;
+    padding-top: 3rem;
+  }
+  .textArea{
+    font-size: .7rem;
+  }
+ }
