@@ -35,8 +35,8 @@ function App() {
       <div className="textbox">
       <h3>We let you buy Stocks in <br/> tokenized form</h3>
       <p>Just like cryptocurrency, Now buy real stocks with any amount <br/>Get yourself a part of stock without buying it a whole.</p>
-          <div className="input-group  textArea">
-            <input type="email" className="form-control textArea " placeholder="Enter your email"  onChange={handleOnChange}/>
+          <div className="input-group  textArea" data-verify="email">
+            <input id="verify-email" type="text" className="form-control textArea" placeholder="Enter your email" name="verify-email|"  onChange={handleOnChange}/>
             <span className="input-group-text btn btn-primary textArea " id="basic-addon2" onClick={() =>{createTodo(); setShow(true); }}>Request Invite</span>
           </div>
           {

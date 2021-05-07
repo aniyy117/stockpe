@@ -83,7 +83,7 @@ header{
 }
 
 .msg{
-  color: rgb(71, 231, 132);
+  color: #297d49;
   font-size: 1rem;
  text-align: center;
   padding: 20px
@@ -96,7 +96,9 @@ header{
 }
 
  @media (max-width: 991px) {
-   
+  body{
+    overflow:auto;
+  }
   header{
     padding: 20px;
   }
@@ -130,3 +132,31 @@ header{
     font-size: 1rem;
   }
  }
+
+ @media screen and (min-width: 1400px) {
+  .logo{
+    max-width: 250px;
+  }
+
+  .content{
+    margin-top: 2rem;
+    margin-right: 3rem;
+    padding-left: 70px;
+  }
+
+  .content .side{
+    max-width: 600px;
+  }
+
+  .content .textbox h3{
+    font-size: 3rem;
+  }
+
+  .textArea{
+    font-size: 1.5rem;
+  }
+  .msg{
+    font-size: 1.3rem;
+  }
+}
+
